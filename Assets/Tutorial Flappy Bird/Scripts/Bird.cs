@@ -7,7 +7,7 @@ public class Bird : MonoBehaviour
     new public Rigidbody2D rigidbody2D;
     public Animator animator;
 
-    void Start()
+    public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

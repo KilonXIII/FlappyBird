@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     int score;
-    internal float scrollSpeedXMultiply;
+    internal float scrollSpeedXMultiply = 1;
 
     internal void AddScore()
     {

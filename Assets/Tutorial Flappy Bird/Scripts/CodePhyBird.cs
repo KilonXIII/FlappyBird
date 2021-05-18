@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,4 +33,15 @@ public class CodePhyBird : Bird
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnDie(collision);
+
+        rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+        enabled = false;
+        GameManager.instace.scrollSpeedXMultiply = 0;
+    }
+
+    
 }

@@ -31,11 +31,15 @@ public class Bird : MonoBehaviour
             }
         }
     }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        OnDie(collision);
+    }
 
+
+    protected void OnDie(Collision2D collision)
+    {
+        Debug.LogWarning(collision);
 
 
         GameManager.instace.SetGameOver();

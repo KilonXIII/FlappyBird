@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
     public Text scoreUI;
+    public float scrollSpeedXMultiple;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     int score;
+    internal float scrollSpeedXMultiply;
 
     internal void AddScore()
     {

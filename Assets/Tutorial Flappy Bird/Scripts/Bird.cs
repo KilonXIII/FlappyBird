@@ -17,16 +17,21 @@ public class Bird : MonoBehaviour
     public float forceY = 100;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) 
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Vector2 force;
-            force.x = 0;
-            force.y = forceY;
-            rigidbody2D.AddForce(force);
+            if (Time.time < 0.7f)
+            {
+                Vector2 force;
+                force.x = 0;
+                force.y = forceY;
+                rigidbody2D.velocity = Vector2.zero;
+                rigidbody2D.AddForce(force);
 
-            animator.Play("Flap", 0, 0);
+                animator.Play("Flap", 0, 0);
+            }
         }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

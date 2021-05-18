@@ -8,7 +8,8 @@ public class ScrollX : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(speedX * Time.deltaTime, 0, 0);
+        transform.Translate(speedX * GameManager.instace.scrollSpeedXMultiply
+            * Time.deltaTime, 0 ,0) ;
 
         
     }
